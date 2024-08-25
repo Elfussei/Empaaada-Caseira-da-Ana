@@ -1,0 +1,87 @@
+:root {
+  --background-color: #FFE493;
+  --navbar-text-color: #000000;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Evita rolagem */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.botao-home {
+  height: 45px;
+  margin-top: -15px;
+}
+  
+
+.nav {
+  list-style: none;
+  display: flex; 
+  justify-content: flex-start; 
+  gap: 36px; 
+  margin: 2% 0 0 2%; /* Ajuste de margens */
+  padding: 0; 
+  font-family: 'Josefin Slab', serif;
+  font-size: 20px;
+}
+
+.nav li {
+  margin: 0; /* Remove a margem padrão dos itens de lista */
+}
+
+.nav a {
+  text-decoration: none; 
+  color: var(--navbar-text-color);
+}
+
+header {
+  flex: 1; /* O header ocupará o espaço necessário */
+  position: relative; /* Para posicionar a imagem direita */
+}
+
+/* Estilo para a imagem à direita ocupar 50% da tela */
+.imagem-direita {
+  position: absolute;
+  top: 0;
+  left: 50vw; /* Inicia a partir do meio da tela */
+  width: 50vw; /* Ocupa metade da largura da tela */
+  height: 100vh; /* Ocupa toda a altura da tela */
+  background-image: url('../image/empadas.jpg'); /* Caminho para a imagem */
+  background-size: cover; 
+  background-position: center;
+}
+
+.marca-nome {
+  position: absolute;
+  top: 20%; /* 140px do topo da tela */
+  left: 3%; /* 36px da lateral esquerda */
+  max-width: calc(50vw - 36px); /* Limita a largura da imagem para evitar ultrapassar o meio da tela */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+
+@media (max-width: 1120px) {
+  .nav {
+    justify-content: center; /* Centraliza a navbar */
+    margin: 1% auto; /* Centraliza horizontalmente com margin auto */
+  }
+
+@media (max-width: 1120px) {
+  .imagem-direita {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 50vh; /* Ajuste a altura conforme necessário */
+  }
