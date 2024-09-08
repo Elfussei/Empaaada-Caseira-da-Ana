@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coustard:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+:root {
+    --background-color: #FFE493;
+    --navbar-text-color: #000000;
+    --navbar-color: #FFF5F5;
+    --navbar-border: #000000;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url(image/empadas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; /* Garante que a imagem cubra toda a tela */
+    background-position: center;
+}
+
+/* NAVBAR */
+.navbar-container {
+    width: 93.9375rem;
+    height: 4rem;
+    border-radius: 0.5625rem;
+    background-color: var(--navbar-color);
+    border: 0.0625rem solid var(--navbar-border);
+    margin: 0 auto;
+    display: flex; /* Utilizando flexbox para alinhar os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    margin-top: 0.625rem;
+    position: relative;
+}
+
+/* Remove padding e margin padrões da lista */
+.navbar-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Alinha os itens da lista em linha */
+}
+
+/* Estilo para os itens da lista */
+.navbar-container ul li {
+    margin: 0 15px;
+}
+
+/* Estilo para os links */
+.navbar-container ul li a {
+    text-decoration: none;
+    color: var(--navbar-text-color); /* Cor do texto dos links usando a variável */
+    font-size: 1.25rem; /* Tamanho da fonte */
+    font-weight: bold;
+    font-family: 'Josefin Slab', serif;
+}
+
+/* Adiciona efeito de hover */
+.navbar-container ul li a:hover {
+    color: var(--background-color);
+}
+
+
+/* Bem-vindo */
+.welcome-to {
+    position: absolute;
+    top: 35%; /* Ajuste conforme necessário */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.welcome-text {
+    font-family: 'Cookie', regular;
+    font-size: 9rem; /* Tamanho do texto ajustado */
+    color: #FFFFFF;
+    text-shadow: -0.0625rem -0.0625rem 0 #000, 0.0625rem -0.0625rem 0 #000, -0.0625rem 0.0625rem 0 #000, 0.0625rem 0.0625rem 0 #000;
+    line-height: 5rem;
+}
+
+/* Pac-Man */
+.pacman-container {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 72rem;
+    height: 8rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 1.25rem;
+}
+
+.pacman-image {
+    height: 5rem; /* Ajuste conforme necessário */
+    margin-right: 1.25rem;
+}
+
+.pacman-text {
+    font-family: 'Coustard', serif;
+    font-size: 4rem;
+    color: #FFCA1D;
+    -webkit-text-stroke: 0.125rem #000000; /* Contorno preto ao redor do texto */
+}
+
