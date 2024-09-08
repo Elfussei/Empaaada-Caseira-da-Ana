@@ -15,57 +15,62 @@ html, body {
     padding: 0;
     background-image: url(image/empadas.jpg);
     background-repeat: no-repeat;
-    background-size: cover; /* Garante que a imagem cubra toda a tela */
+    background-size: cover;
     background-position: center;
+}
+
+img, video {
+    max-width: 100%;
+    height: auto;
 }
 
 /* NAVBAR */
 .navbar-container {
-    width: 93.9375rem;
-    height: 4rem;
+    width: 100%;
+    max-width: 93.9375rem;
+    height: auto;
     border-radius: 0.5625rem;
     background-color: var(--navbar-color);
     border: 0.0625rem solid var(--navbar-border);
     margin: 0 auto;
-    display: flex; /* Utilizando flexbox para alinhar os itens */
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
     margin-top: 0.625rem;
     position: relative;
 }
 
-/* Remove padding e margin padrões da lista */
 .navbar-container ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    display: flex; /* Alinha os itens da lista em linha */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Estilo para os itens da lista */
 .navbar-container ul li {
-    margin: 0 15px;
+    margin: 0.5rem 0;
 }
 
-/* Estilo para os links */
 .navbar-container ul li a {
     text-decoration: none;
-    color: var(--navbar-text-color); /* Cor do texto dos links usando a variável */
-    font-size: 1.25rem; /* Tamanho da fonte */
+    color: var(--navbar-text-color);
+    font-size: 1rem;
     font-weight: bold;
     font-family: 'Josefin Slab', serif;
 }
 
-/* Adiciona efeito de hover */
 .navbar-container ul li a:hover {
     color: var(--background-color);
 }
 
-
 /* Bem-vindo */
 .welcome-to {
     position: absolute;
-    top: 35%; /* Ajuste conforme necessário */
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -74,10 +79,17 @@ html, body {
 
 .welcome-text {
     font-family: 'Cookie', regular;
-    font-size: 9rem; /* Tamanho do texto ajustado */
+    font-size: 5rem;
     color: #FFFFFF;
     text-shadow: -0.0625rem -0.0625rem 0 #000, 0.0625rem -0.0625rem 0 #000, -0.0625rem 0.0625rem 0 #000, 0.0625rem 0.0625rem 0 #000;
-    line-height: 5rem;
+    line-height: 3rem;
+}
+
+@media (max-width: 768px) {
+    .welcome-text {
+        font-size: 3rem;
+        line-height: 2rem;
+    }
 }
 
 /* Pac-Man */
@@ -86,24 +98,38 @@ html, body {
     top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 72rem;
-    height: 8rem;
+    width: 90%;
+    max-width: 72rem;
+    height: auto;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 1rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-left: 1.25rem;
+    padding: 1rem;
+    text-align: center;
 }
 
 .pacman-image {
-    height: 5rem; /* Ajuste conforme necessário */
-    margin-right: 1.25rem;
+    height: 3rem;
+    margin-bottom: 1rem;
 }
 
 .pacman-text {
     font-family: 'Coustard', serif;
-    font-size: 4rem;
+    font-size: 2.5rem;
     color: #FFCA1D;
-    -webkit-text-stroke: 0.125rem #000000; /* Contorno preto ao redor do texto */
+    -webkit-text-stroke: 0.125rem #000000;
 }
 
+@media (max-width: 768px) {
+    .pacman-text {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        background-image: url(image/empadas-pequeno.jpg);
+    }
+}
